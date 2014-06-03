@@ -1,0 +1,225 @@
+@CHARSET "UTF-8";
+
+
+.navbar-default {
+	background-color: #3c3cff;
+	border-color: #aeaeff;
+}
+.navbar-default .navbar-brand {
+	color: #d6dee0;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+	color: #ffffff;
+}
+.navbar-default .navbar-text {
+	color: #d6dee0;
+}
+.navbar-default .navbar-nav > li > a {
+	color: #d6dee0;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #ffffff;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #ffffff;
+	background-color: #aeaeff;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+	color: #ffffff;
+	background-color: #aeaeff;
+}
+.navbar-default .navbar-toggle {
+	border-color: #aeaeff;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: #aeaeff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #d6dee0;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+	border-color: #d6dee0;
+}
+.navbar-default .navbar-link {
+	color: #d6dee0;
+}
+.navbar-default .navbar-link:hover {
+	color: #ffffff;
+}
+
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		color: #d6dee0;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		color: #ffffff;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+		color: #ffffff;
+		background-color: #aeaeff;
+	}
+}
+
+
+
+
+
+
+.width-75px{
+    width: 75px;
+}
+
+.width-150px{
+    width: 150px;
+}
+
+.width-80px{
+    width: 80px
+}
+
+.width-90px{
+    width: 90px
+}
+
+
+.admin-remove-btn{
+    float: right
+    
+}
+
+.admin-list{
+  height: 200px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+	font-family: 'Karla', sans-serif;
+	padding-bottom: 20px;
+}
+
+.navbar {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.form-signin {
+	width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+.form-signin .form-signin-heading,.form-signin .checkbox {
+	margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+	font-weight: normal;
+}
+
+.form-signin .form-control {
+	position: relative;
+	font-size: 16px;
+	height: auto;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+
+.form-signin input[type="text"] {
+	margin-bottom: -1px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.form-signin input[type="password"] {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+#content {
+	margin-bottom:20%;
+}
+
+.userinformation {
+	margin-top: 15px;
+	margin-right: 15px; 
+}
+
+.userinformation input {
+	margin-top: -8px;
+}
+
+.registration {
+	margin-left: 20%;
+	width: 60%;
+}
+
+.registration h1 {
+	font-size: 48px;
+	color: black;
+}
+
+#registrationform {
+	padding-left: 20%;
+	width: 80%;
+}
+
+.checkout {
+	width: 97%;
+	margin-left: 20px;
+}
+
+.checkout .form-control {
+	width: 40px;
+}
+
+.product {
+	padding-left: 15px;
+	width: 95%;
+}
+
+.product .form-group {
+	width: 80%;
+}
+
+.products .description {
+	text-overflow: ellipsis;
+	width: 20px;
+}
+
+.itemform {
+	margin-left : 13px;
+	width: 50px;
+}
+
+.sixtyFour img {
+	max-width:64px;
+	max-height:64px;
+}
+
+.threehundredtwo img {
+	max-width:300px;
+	max-height:200px;
+}
+

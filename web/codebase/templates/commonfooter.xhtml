@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <body>
+        <ui:composition>
+            <hr />
+            <footer id="footer" class="vspace20">
+                <div class="container">
+                    <div class="row">
+                        
+
+                        <div class="col-md-4">
+                            <h4>Location and Contacts</h4>
+                            <p>
+                                <span class="glyphicon glyphicon-map-marker"></span>&nbsp;
+                            </p>
+                            <p>
+                                <span class="glyphicon glyphicon-phone"></span>&nbsp;Phone: 
+                            </p>
+                            <p>
+                                <span class="glyphicon glyphicon-envelope"></span>&nbsp;Email: 
+                            </p>
+                            <p>
+                                <span class="glyphicon glyphicon-globe"></span>&nbsp;Web:
+                            </p>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+            </footer>
+
+            <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+            <h:outputScript library="js" name="bootstrap.min.js" />
+            <h:outputScript library="js" name="holder.js"></h:outputScript>
+            <h:outputScript library="js" name="workshop.js"/>
+            <ui:insert name="js"></ui:insert>
+        </ui:composition>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/templates/commonlayout.xhtml">
+
+    <ui:define name="content" >
+        <div class="row">
+            <div class="col-lg-12">
+                <h:form class="form-inline">
+                    <h:outputLabel  value="Here you can see a list over the assistances. 
+                                    Click on the assistances to see the information about them."/>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h:panelGroup>
+                                <ui:repeat var="assis" value="#{appManager.assistances}">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <h:link value="#{assis.person.getFullname()}" includeViewParams="true" outcome="profile">
+                                                <f:param name="profileId" value="#{assis.id}"/>
+                                            </h:link>
+                                        </div></div>
+                                </ui:repeat>
+                            </h:panelGroup>
+                        </div>
+                    </div>
+                </h:form>
+            </div></div>
+    </ui:define>
+</ui:composition>

@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    
+    <navigation-rule>
+        <display-name>index.xhtml</display-name>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>register</from-outcome>
+            <to-view-id>/registration.xhtml</to-view-id>
+            <redirect /> 
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <display-name>profile.xhtml</display-name>
+        <from-view-id>/profile.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>register</from-outcome>
+            <to-view-id>/registration.xhtml</to-view-id>
+            <redirect /> 
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <display-name>registration.xhtml</display-name>
+        <from-view-id>/registration.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>register</from-outcome>
+            <to-view-id>/registration.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+    	<display-name>index.xhtml</display-name>
+    	<from-view-id>/index.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>admin</from-outcome>
+    		<to-view-id>/admin/adminpanel.xhtml</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    
+    <navigation-rule>
+    	<display-name>studentCalendar.jsp</display-name>
+    	<from-view-id>/index.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>studentCalendar</from-outcome>
+    		<to-view-id>/student/studentCalendar.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+    	<display-name>assistanceCalendar.jsp</display-name>
+    	<from-view-id>/index.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>assistanceCalendar</from-outcome>
+    		<to-view-id>/assistance/assistanceCalendar.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+     <navigation-rule>
+    	<display-name>adminCalendar.jsp</display-name>
+    	<from-view-id>/index.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>adminCalendar</from-outcome>
+    		<to-view-id>/admin/adminCalendar.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+    	<display-name>adminpanel.xhtml</display-name>
+    	<from-view-id>/index.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>adminpanel</from-outcome>
+    		<to-view-id>/admin/adminpanel.xhtml</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+    	<display-name>index.xhtml</display-name>
+    	<from-view-id>/admin/adminpanel.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>index</from-outcome>
+    		<to-view-id>/index.xhtml</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    
+    <navigation-rule>
+    	<display-name>adminpanel.xhtml</display-name>
+    	<from-view-id>/admin/adminpanel.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>studentCalendar</from-outcome>
+    		<to-view-id>/student/studentCalendar.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    
+    <navigation-rule>
+    	<display-name>adminpanel.xhtml</display-name>
+    	<from-view-id>/admin/adminpanel.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>assistanceCalendar</from-outcome>
+    		<to-view-id>/assistance/assistanceCalendar.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+    	<display-name>adminpanel.xhtml</display-name>
+    	<from-view-id>/admin/adminpanel.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>adminCalendar</from-outcome>
+    		<to-view-id>/admin/adminCalendar.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    
+    
+    
+     <navigation-rule>
+    	<display-name>index.xhtml</display-name>
+    	<from-view-id>/index.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>profile</from-outcome>
+    		<to-view-id>/profile.xhtml</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+    	<display-name>profile.xhtml</display-name>
+    	<from-view-id>/profile.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>studentCalendar</from-outcome>
+    		<to-view-id>/student/studentCalendar.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+    	<display-name>profile.xhtml</display-name>
+    	<from-view-id>/profile.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>adminCalendar</from-outcome>
+    		<to-view-id>/admin/adminCalendar.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+    	<display-name>profile.xhtml</display-name>
+    	<from-view-id>/profile.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>assistanceCalendar</from-outcome>
+    		<to-view-id>/assitance/assistanceCalendar.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    
+    
+    <navigation-rule>
+    	<display-name>profile.xhtml</display-name>
+    	<from-view-id>/profile.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>adminpanel</from-outcome>
+    		<to-view-id>/admin/adminpanel.xhtml</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    
+    
+    
+     <navigation-rule>
+    	<display-name>registration.xhtml</display-name>
+    	<from-view-id>/registration.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>studentCalendar</from-outcome>
+    		<to-view-id>/student/studentCalendar.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+    	<display-name>registration.xhtml</display-name>
+    	<from-view-id>/registration.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>adminCalendar</from-outcome>
+    		<to-view-id>/admin/adminCalendar.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+    	<display-name>registration.xhtml</display-name>
+    	<from-view-id>/registration.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>assistanceCalendar</from-outcome>
+    		<to-view-id>/assitance/assistanceCalendar.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    
+    
+    <navigation-rule>
+    	<display-name>registration.xhtml</display-name>
+    	<from-view-id>/registration.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>adminpanel</from-outcome>
+    		<to-view-id>/admin/adminpanel.xhtml</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    
+    
+    
+    <navigation-rule>
+    	<display-name>adminpanel.xhtml</display-name>
+    	<from-view-id>/admin/adminpanel.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>index.xhtml</from-outcome>
+    		<to-view-id>/index.xhtml</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    
+</faces-config>

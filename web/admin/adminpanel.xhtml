@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition           xmlns="http://www.w3.org/1999/xhtml"
+                          xmlns:h="http://java.sun.com/jsf/html"
+                          xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                          xmlns:f="http://xmlns.jcp.org/jsf/core"
+                          xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+                          xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+                          template="/templates/commonlayout.xhtml">
+
+    <ui:define name="content" >
+
+
+
+        <div style="padding-bottom: 20px"></div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2> Admin Panel </h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h:panelGroup >
+                            <h:outputLabel  value="Add new subject "/>
+                            <h:form class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="input-group">
+                                            <h:inputText id="ability" p:placeholder="New subject" class="form-control" label="ability" value="#{adminPanelManager.newAbility}"/>
+                                            <span class="input-group-btn">
+                                                <h:commandButton  class="btn btn-success width-75px " action="#{adminPanelManager.addNewAbility}" value="Add"/>
+                                            </span>
+                                        </div>
+                                    </div></div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h:selectManyMenu  class="form-control admin-list"  id="selectManyMenu" value="#{adminPanelManager.abilityToremove}" style="height: 200px;">
+                                            <f:selectItems value="#{adminPanelManager.abilities}" var="ability" />
+                                        </h:selectManyMenu>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <span class="input-group-btn">
+                                            <h:commandButton class="btn  btn-danger admin-remove-btn"  action="#{adminPanelManager.removeAbilities}" value="Remove" />
+                                        </span>  </div>      
+                                </div>
+                            </h:form>
+                        </h:panelGroup>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h:panelGroup>
+                            <h:outputLabel  value="Add new assistance:"/>
+                            <h:form class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="input-group">
+                                            <h:inputText class="form-control" p:placeholder="Email" value="#{adminPanelManager.newAssistanceEmail}" id="asisstance" label="new Assistance"  />
+                                            <span class="input-group-btn">
+                                                <h:commandButton class="btn  btn-success width-75px" action="#{adminPanelManager.addNewAssistance}" value="Add"/>
+                                            </span>
+                                        </div>
+                                    </div></div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h:selectManyMenu class="form-control admin-list"  value="#{adminPanelManager.choosedAssistancesEmailes}" style="height: 200px;">
+                                            <f:selectItems value="#{adminPanelManager.assistances}" />
+                                        </h:selectManyMenu>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <span class="input-group-btn">
+                                            <h:commandButton  class="btn btn-danger admin-remove-btn"  action="#{adminPanelManager.removeAssistance}" value="Remove" />
+                                        </span>
+                                    </div></div>
+                            </h:form>
+                        </h:panelGroup>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h:panelGroup rendered="#{userManager.superAdmin == true}">
+                            <h:outputLabel  value="Add new Admin"/>
+                            <h:form class="form-group">
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="input-group">
+
+                                            <h:inputText class="form-control" p:placeholder="Email" value="#{adminPanelManager.newAdminEmail}" id="asisstance" label="new Assistance"  />
+                                            <span class="input-group-btn">
+                                                <h:commandButton class="btn  btn-success width-75px" action="#{adminPanelManager.addNewAdmin}" value="Add"/>
+                                            </span>
+                                        </div>
+                                    </div></div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h:selectManyMenu class="form-control"  value="#{adminPanelManager.choosedAdminEmailes}" style="height: 200px;">
+                                            <f:selectItems value="#{adminPanelManager.admins}" />
+                                        </h:selectManyMenu>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <span class="input-group-btn">
+                                            <h:commandButton  class="btn btn-danger admin-remove-btn"  action="#{adminPanelManager.removeAdmins}" value="Remove" />
+                                        </span>
+
+                                    </div></div>
+                            </h:form>
+                        </h:panelGroup>
+
+                    </div>
+                </div>
+
+
+
+            </div></div>
+
+
+    </ui:define>
+</ui:composition>
+
+

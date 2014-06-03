@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<ui:composition           xmlns="http://www.w3.org/1999/xhtml"
+                          xmlns:h="http://java.sun.com/jsf/html"
+                          xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                          xmlns:f="http://xmlns.jcp.org/jsf/core"
+                          xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+                          template="/templates/commonlayout.xhtml">
+
+    <ui:define name="content">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <h1> Assistance profile </h1>
+                <div class="row">
+                    <div class="col-lg-6">
+
+
+                        <h:panelGroup>
+                            <h:form class="form-group">
+
+                                <div class="col-lg-6">
+                                    <div class="input-group">
+                                        <div class="row">
+                                        <h:outputLabel for="name" value="Name: "/>
+                                        <h:outputText id="name" value="#{profileManager.profilePerson.getFullname()}" />
+                                        </div>
+                                        <div class="row">
+                                        <h:outputLabel for="email" value="Email: "/>
+                                        <h:outputText  id="email" value="#{profileManager.email}" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </h:form>
+
+                        </h:panelGroup>
+
+
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h:panelGroup>
+                            <h:form class="form-group">
+                                <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="input-group">
+                                        <h:outputLabel  value="I can Help you in these subjects: "/>
+
+                                        <h:selectManyMenu  class="form-control" id="selectManyMenu" value="#{profileManager.abilitiyToremove}">
+                                            <f:selectItems value="#{profileManager.assistanceAbilities}" />
+                                        </h:selectManyMenu>
+
+                                        <span class="input-group-btn">
+                                            <h:commandButton class="btn btn-danger " action="#{profileManager.removeAbilities}" value="Remove" rendered="#{profileManager.editable == true}" >
+                                                <f:param name="profileId" value="#{profileManager.profileId}" />
+                                            </h:commandButton>
+                                        </span>
+                                    </div>
+                                </div></div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="input-group">
+                                        <h:outputLabel rendered="#{profileManager.editable == true}" value="All the other subjects: "/>
+                                        <h:selectManyMenu class="form-control" value="#{profileManager.abilitiesToAdd}" rendered="#{profileManager.editable == true}">
+                                            <f:selectItems value="#{profileManager.allAbilities}"/>
+                                        </h:selectManyMenu>
+                                        <span class="input-group-btn">
+                                            <h:commandButton class="btn btn-success width-75px" action="#{profileManager.addAbilities}" value="Add" rendered="#{profileManager.editable == true}">
+                                                <f:param name="profileId" value="#{profileManager.profileId}" />
+                                            </h:commandButton>
+                                        </span>
+                                    </div></div></div>
+                            </h:form>
+                        </h:panelGroup>
+                    
+            </div></div>
+
+
+            </div></div>
+    </ui:define>
+</ui:composition>

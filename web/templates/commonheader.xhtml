@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+    <body>
+        <ui:composition>
+            <!-- Exceptions -->
+            <h:panelGroup id="exceptions">
+                <h:panelGroup rendered="#{not empty facesContext.messageList}">
+                    <ui:repeat var="message" value="#{facesContext.messageList}">
+                        <div
+                            class="alert alert-dismissable #{(message.severity eq 'ERROR 2') ? 'alert-danger' : 'alert-success'}">
+                            <button type="button" class="close" data-dismiss="alert"
+                                    aria-hidden="true">x</button>
+                            <strong><h:outputText
+                                    rendered="#{message.severity eq 'ERROR 2'}" value="Sorry!" /> </strong>
+                            <h:outputText value="#{message.detail}" />
+                        </div>
+                    </ui:repeat>
+                </h:panelGroup>
+            </h:panelGroup>
+            <!-- End of exceptions -->
+
+            <!-- Show user information -->
+            <h:panelGroup rendered="#{userManager.loggedIn}">
+                <div class="userinformation" align="right">
+                    <h:form class="form-horizontal">
+                        <div class="form-group">
+                            <h:outputText value="Welcome, #{userManager.fullname}" />
+
+                            <h:commandLink class="btn btn-danger btn-sm"
+                                           action="#{userManager.logout}">
+                                <span class="glyphicon glyphicon-log-out"> Logout</span>
+                            </h:commandLink>
+                        </div>
+                    </h:form>
+                </div>
+            </h:panelGroup>  
+            <!-- End of show user information -->
+
+            <div class="navbar navbar-default" role="navigation" >
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span> <span
+                            class="icon-bar"></span> <span class="icon-bar"></span> <span
+                            class="icon-bar"></span>
+                    </button>
+                    <h:link class="navbar-brand" outcome="index" value="Workshop" />
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <h:panelGroup >
+
+                            <li><h:link value="Student Calendar" outcome="studentCalendar" target="new"
+                                        includeViewParams="true" rendered="#{userManager.loggedIn}">
+                                    <span class="glyphicon glyphicon-calendar"/>
+
+                                    
+                                </h:link></li>
+
+                            <li>
+                                <h:link value="Assistance Calendar" outcome="assistanceCalendar" target ="new"
+                                        includeViewParams="true" rendered="#{ userManager.assistance == true}">
+                                    <span class="glyphicon glyphicon-calendar"/>
+
+                                 
+                                </h:link></li>
+
+                            <li><h:link value="Admin Calendar" outcome="adminCalendar" target ="new" 
+                                        includeViewParams="true" rendered="#{userManager.admin == true}">
+                                    <span class="glyphicon glyphicon-calendar"/>
+                     
+                                </h:link></li>
+
+
+
+                            <li><h:link value="Admin Panel" outcome="adminpanel" 
+                                        includeViewParams="true" rendered="#{userManager.admin == true || userManager.superAdmin==true}">
+                                    <span class="glyphicon glyphicon-cog"/>
+
+                                    
+                                </h:link></li>
+
+
+                        </h:panelGroup>
+                    </ul>
+
+                    <!-- Right side navigation -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <h:panelGroup rendered="#{!userManager.loggedIn}">
+                            <li><h:link value="Register" outcome="register" /></li>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle"
+                                                    data-toggle="dropdown">Sign in </a>
+                                <div class="dropdown-menu">
+                                    <h:form class="form-signin">
+                                           
+
+                                        <h:inputText class="form-control" p:placeholder="Username"
+                                                     value="#{userManager.username}" />
+
+                                        <h:inputSecret class="form-control " p:placeholder="Password"
+                                                       value="#{userManager.password}" />
+
+                                        <h:commandLink id="login"
+                                                       class="btn btn-primary btn-success btn-group-justified"
+                                                       action="#{userManager.authenticate}">
+                                            <span class="glyphicon glyphicon-log-in"/> Sign in 
+                                        </h:commandLink>
+
+                                    </h:form>
+                                </div></li>
+                        </h:panelGroup>
+                    </ul>
+                    <!-- End of right side navigation -->
+                </div>
+            </div>
+        </ui:composition>
+    </body>
+</html>

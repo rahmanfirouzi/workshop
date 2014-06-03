@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Faces Configuration Only" version="2">
+    <Scope Scope="Faces Configuration Only">
+        <Node id="admin/adminCalendar.jsp" x="-129" y="320" zoom="true"/>
+        <Node id="assistance/assistanceCalendar.jsp" x="46" y="393" zoom="true"/>
+        <Node id="index.xhtml" x="222" y="-66" zoom="true"/>
+        <Node id="student/studentCalendar.jsp" x="-161" y="182" zoom="true"/>
+        <Node id="assitance/assistanceCalendar.jsp" x="435" y="76" zoom="true"/>
+        <Node id="admin/adminpanel.xhtml" x="328" y="281" zoom="true"/>
+        <Node id="registration.xhtml" x="-169" y="67" zoom="true"/>
+        <Node id="profile.xhtml" x="150" y="150" zoom="true"/>
+    </Scope>
+    <Scope Scope="Project">
+        <Node id="codebase/locale/recurring/repeat_template_sk.html" x="900" y="300" zoom="true"/>
+        <Node id="codebase/locale/recurring/repeat_template_el.html" x="1400" y="300" zoom="true"/>
+        <Node id="templates/commonlayout.xhtml" x="1048" y="246" zoom="true"/>
+        <Node id="registration.xhtml" x="-169" y="67" zoom="true"/>
+        <Node id="leftFram.xhtml" x="683" y="245" zoom="false"/>
+        <Node id="codebase/locale/recurring/repeat_template_de.html" x="900" y="450" zoom="true"/>
+        <Node id="codebase/locale/recurring/repeat_template_it.html" x="400" y="900" zoom="true"/>
+        <Node id="codebase/locale/recurring/repeat_template_es.html" x="650" y="600" zoom="true"/>
+        <Node id="assitance/assistanceCalendar.jsp" x="-160" y="644" zoom="true"/>
+        <Node id="admin/adminpanel.xhtml" x="144" y="675" zoom="true"/>
+        <Node id="admin/adminEvents.jsp" x="650" y="150" zoom="true"/>
+        <Node id="profile.xhtml" x="589" y="33" zoom="true"/>
+        <Node id="admin/adminCalendar.jsp" x="-129" y="320" zoom="true"/>
+        <Node id="codebase/locale/recurring/repeat_template.html" x="400" y="450" zoom="true"/>
+        <Node id="codebase/locale/recurring/repeat_template_ru.html" x="668" y="597" zoom="true"/>
+        <Node id="student/calendar.xhtml" x="150" y="900" zoom="true"/>
+        <Node id="codebase/locale/recurring/repeat_template_fr.html" x="150" y="600" zoom="true"/>
+        <Node id="codebase/locale/recurring/repeat_template_cn.html" x="698" y="285" zoom="true"/>
+        <Node id="student/studentCalendar.jsp" x="-162" y="163" zoom="true"/>
+        <Node id="student/studentEvents.jsp" x="1150" y="300" zoom="true"/>
+        <Node id="index2.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="student/studentsSummeryEvents.jsp" x="400" y="750" zoom="true"/>
+        <Node id="templates/commonfooter.xhtml" x="1400" y="150" zoom="true"/>
+        <Node id="assistance/assistanceCalendar.jsp" x="46" y="393" zoom="true"/>
+        <Node id="index.xhtml" x="306" y="181" zoom="true"/>
+        <Node id="assistance/assistanceEvents.jsp" x="150" y="750" zoom="true"/>
+        <Node id="templates/commonheader.xhtml" x="650" y="750" zoom="true"/>
+        <Node id="codebase/locale/recurring/repeat_template_nl.html" x="900" y="600" zoom="true"/>
+        <Node id="codebase/locale/recurring/repeat_template_be.html" x="1150" y="450" zoom="true"/>
+        <Node id="codebase/locale/recurring/repeat_template_ro.html" x="1007" y="207" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>
