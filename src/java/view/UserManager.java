@@ -20,7 +20,9 @@ import model.PersonDTO;
 @ManagedBean(name = "userManager")
 @SessionScoped
 public class UserManager implements Serializable {
-
+    //test!
+    
+    
     private PersonDTO current = null;
     private String username;
     private String password;
